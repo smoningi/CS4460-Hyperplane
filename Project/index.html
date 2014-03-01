@@ -15,10 +15,22 @@
     </head>
     <body onload="onload()">
       <div id="container">
+        <div>
+            <label style="margin-left: 30px;" for="data-shown">Data Shown: </label>
+            <select id="data-shown">
+              <option name="test" value="legCount">Legislator Count</option>
+              <option name="test1" value="billCount">Bill Count</option>
+              <option name="test3" value="popCount">Population</option>
+            </select>
+            
+            <button style="margin-left: 650px;" align="right" id="switchView" type="button">Switch View</button>
+        </div>
+
         <div id="vis">
         </div>
+
         <div id="controls">
-          <div>Details: <div id="details"></div></div>
+          <div><div id="specific"></div></div>
           <div>
             <label for="x-axis-select">Year Select: </label>
             <select id="x-axis-select">
@@ -29,7 +41,32 @@
               <option name="test5" value="2011">2011</option>
             </select>
           </div>
+       </div>
+
+      <div id="overview">
+          <div id="stateImage">  
+          </div>
+          <div id="stateInfo">
+            <div id="stateName">State Name</div>
+            <div id="repCount">Rep Count</div>
+            <div id="senateCount">Senate Count</div>
+            <div id="billCount">Bill Count</div>
+          </div>
+          <div id="legList">
+            <div style="width:150px;height:150px;line-height:3em;overflow:auto;padding:5px;">
+              <ul>
+                <li>test</li>
+                <li>test</li>
+                <li>test</li>
+                <li>test</li>
+                <li>test</li>
+              </ul>
+            </div>
+
+          </div>
       </div>
+
+    </div>
       <script src="js/vendor/d3.v3.min.js"></script>
       <script src="js/support.js"></script>
       <script src="js/main.js"></script>

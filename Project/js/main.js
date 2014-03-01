@@ -121,7 +121,7 @@ function draw() {
                 var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'text'); //Create a path in SVG's namespace
                 newElement.setAttribute("y", stateBBox.y + stateBBox.height/2); 
                 newElement.setAttribute("x", stateBBox.x + stateBBox.width/2); 
-                newElement.setAttribute("fill", "blue"); 
+                newElement.setAttribute("fill", "white"); 
                 newElement.textContent = stateData[state].name;
                 svgMap.appendChild(newElement);
             }
@@ -160,6 +160,6 @@ a string and it will be displayed. For example,
     showDetails("Variety: " + item.variety);
 **/
 function showDetails(string){
-    d3.select('#details').html(string);
+    d3.select('#specific').html(string);
 }
 
